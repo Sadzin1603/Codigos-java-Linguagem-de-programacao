@@ -7,15 +7,14 @@ public class lt01_ex23 {
 	public static void main (String args []){
 		
 		double n1,n2,n3,n4;
+		String res;
 		
 		n1 = Double.parseDouble(JOptionPane.showInputDialog("Digite um numero"));
 		n2 = Double.parseDouble(JOptionPane.showInputDialog("Digite outro numero maior que o primeiro"));
 		n3 = Double.parseDouble(JOptionPane.showInputDialog("Digite outro numero maior que o segundo"));
 		
 		n4 = Double.parseDouble(JOptionPane.showInputDialog("Digite outro numero não necessariamente maior"));
-		
-		//Refazer a logica
-		
+			
 		if(n4>n3) {
 			JOptionPane.showMessageDialog(null,Double.toString(n1)+", "+Double.toString(n2)+", "+Double.toString(n3)+", "+Double.toString(n4));
 		}else if(n4>n2) {
