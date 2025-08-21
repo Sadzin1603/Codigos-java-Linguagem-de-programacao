@@ -7,27 +7,26 @@ public class lt01_ex35 {
 	
 	public static void main (String args []) {
 		int num1,num2,res=0;
-    int maior,menor;
+		int maior=0,menor=0;
     
 		num1 = Integer.parseInt(JOptionPane.showInputDialog("Digite um numero"));
-    num2 = Integer.parseInt(JOptionPane.showInputDialog("Digite um numero"));
+		num2 = Integer.parseInt(JOptionPane.showInputDialog("Digite um numero"));
 
-    if(num1>num2){
-      maior = num1;
-      menor = num2;
-    }else if(num2>num1){
-      maior = num2;
-      menor = num1;
-    }else{
-      JOptioonPane.showMessageDialog(null,"Numeros identicos");
-      System.exit(0);
-    }
+	    if(num1>num2){
+	      maior = num1;
+	      menor = num2;
+	    }else if(num2>num1){
+	      maior = num2;
+	      menor = num1;
+	    }else{
+	      JOptionPane.showMessageDialog(null,"Numeros identicos");
+	      System.exit(0);
+	    }
 		
-		for(int x=num1;x<num2;x++) {
-      if(x%2!=0){
-        res+=x;
-      }
-			
+		for(int x=menor;x<=maior;x++) {
+			if(x%2!=0){
+				res+=x;
+			}	
 		}
 		JOptionPane.showMessageDialog(null,"A soma dos numeros impares entre o menor e o maior numero é de  "+(Integer.toString(res)));
 		
