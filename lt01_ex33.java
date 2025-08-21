@@ -10,7 +10,7 @@ public class lt01_ex33 {
 		
 		num = Double.parseDouble(JOptionPane.showInputDialog("Digite um numero"));
 		
-		for(double x=num;x>0;x--) {
+		for(double x=0;x<num;x++) {
 			res+=1/x;
 		}
 		JOptionPane.showMessageDialog(null,"O fatorial do numero é "+(Double.toString(res)));
