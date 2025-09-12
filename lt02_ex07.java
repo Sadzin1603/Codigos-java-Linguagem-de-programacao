@@ -1,4 +1,4 @@
-package teste;
+package Lote_1;
 import javax.swing.JOptionPane;
 public class lt02_ex07 {
 
@@ -12,6 +12,24 @@ public class lt02_ex07 {
 		for(int x=0;x<20;x++) {
 			System.out.println(vet[x]);
 		}
+		
+		int num = Integer.parseInt(JOptionPane.showInputDialog("Digite um numero"));
+		int inicio,fim,meio;//Crio um inicio meio e fim
+		inicio = 0;
+		fim = vet.length;
+		while(inicio <= fim) {
+			meio = inicio + (fim - inicio) / 2;
+			if(vet[meio] == num) {
+				JOptionPane.showMessageDialog(null, "O numero está no vetor");
+				System.exit(1);
+			}else if(num > vet[meio]) {
+				inicio = meio+1;
+			}else if(num < vet[meio]) {
+				fim= meio-1;
+			}
+		}
+		JOptionPane.showMessageDialog(null,"O numero não está no vetor");
+		
 		
 	}
 	public static int[] carrega(int vetor[]) {
